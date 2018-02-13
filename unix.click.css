@@ -57,3 +57,13 @@ html, body {
     box-shadow: none !important;
     background-color: transparent !important;
 }
+
+.links {
+    margin-top: 3rem;
+    font-size: .8rem;
+    color: #999;
+    text-align: center;
+}
+.links__link {
+    color: #999;
+}
