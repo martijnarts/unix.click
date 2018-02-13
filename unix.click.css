@@ -44,59 +44,16 @@ html, body {
 }
 
 .timestamp {
-    width: 9rem;
+    width: 160px;
+}
+.iso8601 {
+    width: 335px;
 }
 
-.i8601::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.i8601 {
-    padding: 0;
-    font-family: Monaco, monospace;
-    font-size: 1.4rem;
-    display: inline-flex;
-}
-
-.i8601__text,
-.i8601__field {
-    display: block;
-    float: left;
-
-    border-right: 1px solid #bbb;
-}
-.i8601__text:last-child,
-.i8601__field:last-child {
-    border-right: none;
-}
-
-.i8601__text {
-    padding: 2px 4px;
-}
-
-.i8601__field {
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-
-    font-family: Monaco, monospace;
-    font-size: 1.4rem;
-    padding: 2px 4px;
-    outline: none;
-    width: 2.4rem;
-}
-
-.i8601__field--double {
-    width: 4rem;
-}
-
-
-.i8601__field::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-.ii8601__field {
-    -moz-appearance: textfield;
+.flatpickr-calendar {
+    margin: 0 auto !important;
+    top: 20px !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
