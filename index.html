@@ -28,23 +28,29 @@
                     </span>
                 </div>
                 <input
-                    name="timestamp"
+                    id="timestamp"
                     type="number"
                     class="field__input timestamp js-unix"
                     placeholder="1469765199">
             </div>
 
             <div class="field">
-                <label class="field__label">ISO 8601:</label>
+                <label for="iso8601" class="field__label">ISO 8601:</label>
                 <input
-                       type="text"
-                       class="field__input iso8601 js-flatpicker">
+                    id="iso8601"
+                    type="text"
+                    class="field__input iso8601 js-flatpicker">
             </div>
 
             <p class="links">
                 Made by <a class="links__link" href="https://martijnarts.com">Martijn Arts</a>
                 &middot;
                 Available on <a class="links__link" href="https://github.com/TotempaaltJ/unix.click">Github</a>
+                <br>
+                <span class="subtle">
+                    <strong>Tip:</strong>
+                    Use Ctrl + V or Cmd + V to paste a timestamp directly.
+                </span>
             </p>
         </div>
 
