@@ -15,11 +15,23 @@
         <div class="container">
             <h1 class="title">unix.click</h1>
             <div class="field">
-                <label class="field__label">Timestamp:</label>
+                <div class="field__label">
+                    <label for="timestamp">Timestamp:</span>
+                    <span class="subtle">
+                        <label for="isMilliseconds">
+                            <input
+                               id="isMilliseconds"
+                               type="checkbox"
+                               class="js-isMilliseconds">
+                            millisecond timestamp
+                        </label>
+                    </span>
+                </div>
                 <input
-                       type="number"
-                       class="field__input timestamp js-unix"
-                       placeholder="1469765199">
+                    name="timestamp"
+                    type="number"
+                    class="field__input timestamp js-unix"
+                    placeholder="1469765199">
             </div>
 
             <div class="field">
