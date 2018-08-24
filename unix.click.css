@@ -43,8 +43,17 @@ html, body {
     border-color: #600;
 }
 
+.subtle {
+    /*color: rgba(0, 0, 0, .6);*/
+    opacity: .6;
+    font-size: 80%;
+}
+
 .timestamp {
     width: 160px;
+}
+.timestamp--milliseconds {
+    width: 208px;
 }
 .iso8601 {
     width: 335px;
