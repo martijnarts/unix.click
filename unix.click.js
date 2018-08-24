@@ -6,9 +6,6 @@ window.addEventListener('load', () => {
     const millisecondsCheckbox = document.querySelector('.js-isMilliseconds');
 
     let useMilliseconds = millisecondsCheckbox.checked;
-    if (useMilliseconds) {
-        unix.classList.add('timestamp--milliseconds');
-    }
 
     const datepicker = flatpickr(iso8601, {
         allowInput: true,
@@ -49,10 +46,29 @@ window.addEventListener('load', () => {
         setISO(+unix.value);
     }
 
+    function catchPaste(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const paste = (event.clipboardData || window.clipboardData)
+            .getData('text');
+        if (paste.match(/^\d+$/)) {
+            unix.value = +paste;
+            setISO(+paste);
+        }
+    }
+
+    /* Setup */
+    if (useMilliseconds) {
+        unix.classList.add('timestamp--milliseconds');
+    }
+
     unix.addEventListener('input', (event) => {
         setISO(+unix.value);
     });
     millisecondsCheckbox.addEventListener('change', (event) => {
         changeMilliseconds();
     });
+
+    document.addEventListener('paste', catchPaste);
 });
